@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>TLDR pages creation wizard</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div id="title"></div>
+
+    <form action="check" id="show-after-animation">
+        <input type="text" name="title" required>
+        <input type="submit">
+    </form>
+
+    <script>
+        saveURLParamsToLocalStorage();
+        displayContent('<h1>Hi! This website will help you creating or editing a TL;DR page!<h1><h3>To edit a existing page enter the <a href="editor">editor</a>.</h3> <h2> Type your command name bellow:</h2>', ["type your command name here", "lsar", "tar", "libreoffice", "llvm-ifs"], []);
+    </script>
+</body>
+
+</html>

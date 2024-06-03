@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>TLDR pages creation wizard</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div id="title"></div>
+
+    <div id="show-after-animation">
+        <form action="description">
+            <fieldset>
+                <input type="radio" value="common" id="common" name="platform" required>
+                <label for="common">More than one platform</label><br>
+
+                <input type="radio" value="linux" id="linux" name="platform" required>
+                <label for="linux">Linux</label><br>
+
+                <input type="radio" value="osx" id="osx" name="platform" required>
+                <label for="osx">OSX</label><br>
+
+                <input type="radio" value="windows" id="windows" name="platform" required>
+                <label for="windows">Windows</label><br>
+
+                <input type="radio" value="sunos" id="sunos" name="platform" required>
+                <label for="sunos">SunOS</label><br>
+
+                <input type="radio" value="android" id="android" name="platform" required>
+                <label for="android">Android</label><br>
+
+                <input type="radio" value="freebsd" id="freebsd" name="platform" required>
+                <label for="freebsd">FreeBSD</label><br>
+
+                <input type="radio" value="netbsd" id="netbsd" name="platform" required>
+                <label for="netbsd">NetBSD</label><br>
+
+                <input type="radio" value="openbsd" id="openbsd" name="platform" required>
+                <label for="openbsd">OpenBSD</label><br>
+            </fieldset>
+
+            <input type="submit">
+        </form>
+
+    </div>
+
+    <script>
+        displayContent('<h1>Now we need to choose on which platforms this command is avaiable.<h1> <h2>Your command runs on:</h2>', [], []);
+        saveURLParamsToLocalStorage();
+        hidePlatformRadioButtons();
+    </script>
+</body>
+
+</html>

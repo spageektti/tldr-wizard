@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>TLDR pages creation wizard</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div id="title"></div>
+
+    <div id="show-after-animation">
+        <form action="description">
+            <fieldset><input type="text" name="title" class="long-input" required></fieldset>
+
+            <input type="submit">
+        </form>
+
+        <a target="_blank"
+            href="https://github.com/tldr-pages/tldr/blob/main/contributing-guides/style-guide.md#example-descriptions">
+            <h3>Style Guide</h3>
+        </a>
+
+        <details id="tldr-page">
+            <summary>
+                <h3>Click to see our current tldr page created in previous steps</h3>
+            </summary>
+
+            <pre>
+              <code>
+                function add (a,b) {
+                sum = a + b;
+                return sum;
+                }
+              </code>
+            </pre>
+        </details>
+
+        <details id="man-page">
+            <summary>
+                <h3>Click to see the man page</h3>
+            </summary>
+        </details>
+    </div>
+
+    <script>
+        displayContent('<h1>Now we need to add a description for our command.<h1> <h2>Type the descripton below:</h2>', ["Type your description here.", "A tool for interacting with a Git repository.", "Change the current working directory.", "A sketching and painting program designed for digital artists.", "Ripgrep is a recursive line-oriented search tool."], []);
+        saveURLParamsToLocalStorage();
+    </script>
+</body>
+
+</html>

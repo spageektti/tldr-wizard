@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>TLDR pages creation wizard</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <h1 id="hide-when-finished">checking.<span id="waiting"></span></h1>
+    <div class="warning-container">
+        <h1 class="warning"></h1>
+        <div>
+            <a href="platform" class="lighter-primary-text">Yes, continue</a>
+            <a href="/">Go back to main page</a>
+        </div>
+    </div>
+
+    <script>
+        new Typed('#waiting', { strings: ['', '.', '..',], showCursor: false, speed: 10000, loop: true });
+        alreadyExistWarning();
+        saveURLParamsToLocalStorage();
+    </script>
+</body>
+
+</html>
